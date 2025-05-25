@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panduan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      overflow-x: hidden;
+    }
+
+    .nav-pills .nav-link {
+      color: black;
+      background-color: #FFE1D9;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: #002E67;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .tab-container {
+      background-color: #FFE1D9 ;
+      border-radius: 15px;
+      padding: 7px;
+    }
+
+    .custom-footer {
+      background-color: #002E67;
+    }
+
+    footer a {
+        display: block;
+        text-decoration: none !important;
+        color: inherit;
+      }
+
+      footer a .custom-p {
+      font-size: 14px;
+      }
+
+      footer a .footer-app {
+        width: 181px;
+        height: 46px;
+      }
+
+      .footer-bottom {
+        background-color: #002e67;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid#ffffff;
+        margin-top: 30px;
+      }
+
+      .nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      @media (max-width: 767px) {
+        .nav-item {
+          flex-basis: auto;
+          min-width: fit-content;
+          margin-bottom: 0;
+        }
+        footer .footer-link {
+          font-size: 13px;
+        }
+
+        .custom-footer .container {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .footer-bottom {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+
+      .logo-navbar {
+        max-width: 50px;
+        height: auto;
+      }
+
+      @media (max-width: 576px) {
+        .footer-bottom {
+          font-size: 12px;
+        }
+      }
+
+      footer .container .row {
+        margin-bottom: 10px;
+      }
+
+      .section-container {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="d-flex align-items-center mt-5 ms-4">
+        <a href="home.html">
+        <img src="Gambar_Panduan/IkonBack.png" alt="Back Icon" class="me-2" style="width: 15px; height: 19px;">
+        </a>
+        <h4 class="fw-bold mb-0">Panduan</h4>
+    </div>
+
+      <div class="d-flex justify-content-center mt-4 mx-3">
+        <ul class="nav nav-pills tab-container">
+          <li class="nav-item mx-2 flex-fill">
+            <a class="nav-link active d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">Panduan SAM</a>
+          </li>
+          <li class="nav-item mx-2 flex-fill">
+            <a class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">FAQ</a>
+          </li>
+          <li class="nav-item mx-2 flex-fill">
+            <a class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">Kontak Bantuan</a>
+          </li>
+        </ul>
+    </div>
+
+    <div class="mt-5 ms-4">
+        <div class="d-flex align-items-center mb-1">
+            <img src="Gambar_Panduan/loginApp.png" alt="Login Aplikasi" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 1: Masuk ke Aplikasi</h6>
+        </div>
+        <p class="mb-0 me-2">Login dengan akun Anda. Belum punya? Daftar terlebih dahulu.</p>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1 mt-4">
+            <img src="Gambar_Panduan/Lapor.png" alt="Ajukan Laporan" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 2: Ajukan Laporan</h6>
+        </div>
+        <ul>
+            <li>Buka Menu Laporan</li>
+            <li>Pilih Formulir Laporan</li>
+            <li>Tentukan Kategori Masalah</li>
+            <li>Tambahkan Foto/Video jika perlu</li>
+            <li>Tekan Kirim Laporan</li>
+        </ul>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1 mt-4">
+            <img src="Gambar_Panduan/activity.png" alt="Pantau Aktivitas" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 3: Pantau Aktivitas</h6>
+        </div>
+        <ul>
+            <li>Cek Status & Progres Laporan</li>
+            <li> Lihat Estimasi Waktu Penanganan</li>
+            <li>Akses Riwayat Laporan</li>
+            <li>Berikan Feedback & Evaluasi</li>
+        </ul>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1">
+            <img src="Gambar_Panduan/notif.png" alt="Notifikasi" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 4: Dapatkan Notifikasi</h6>
+        </div>
+        <p class="mb-0 me-2">Lihat semua update laporan, respon pemerintah, dan pengingat di menu Notifikasi.</p>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1">
+            <img src="Gambar_Panduan/readPanduan.png" alt="Baca Panduan" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 5: Baca Panduan & Bantuan</h6>
+        </div>
+        <p class="mb-0 me-2">Akses FAQ atau hubungi Kontak Bantuan untuk bantuan teknis atau informasi lainnya.</p>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1">
+            <img src="Gambar_Panduan/InfoKota.png" alt="Informasi Kota" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 6: Info Kota</h6>
+        </div>
+        <p class="mb-0 me-2">Temukan Program Pemerintah, Kebijakan Baru, dan Pembaruan Masalah Kota di menu Info Kota.</p>
+
+        <hr class="my-4 me-4">
+
+        <div class="d-flex align-items-center mb-1">
+            <img src="Gambar_Panduan/Settings.png" alt="Kelola Akun" class="me-2" style="width: 15px; height: 19px;">
+            <h6 class="fw-bold mb-0">Langkah 7: Kelola Akun</h6>
+        </div>
+        <p class="mb-5 me-2">Perbarui Profil, cek ulang Kebijakan Aplikasi, dan atur pengaturan sesuai kebutuhan Anda.</p>
+    </div>
+
+    <footer class="custom-footer navbar-dark text-light .fw-normal .custom-p pt-5">
+        <div class="row justify-content-center text-center py-3">
+          <h3 class="fw-bold">Ayo Unduh SAM Saiki, Ker!</h3>
+          <div class="d-flex justify-content-center gap-2 mt-4 mb-5">
+            <a href="https://play.google.com/store/games?hl=id&pli=1" target="_blank" rel="noopener noreferrer">
+              <img src="Gambar_Footer/PlayStore.png" class="footer-app" alt="Logo Play Store" />
+            </a>
+            <a href="https://www.apple.com/id/app-store/" target="_blank" rel="noopener noreferrer">
+              <img src="Gambar_Footer/AppStore.png" class="footer-app" alt="Logo App Store" />
+            </a>
+          </div>
+        </div>
+
+        <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+              <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="Gambar_Beranda/FixLogo_SAM.png" class="logo-navbar mb-2" alt="Logo" />
+                <h5 class="fw-bold">Swara Arek Malang</h5>
+              </a>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1 mb-2">Alamat <br />Jl. Veteran No.8, Ketawanggede, Kec. Lowokwaru,<br>
+                    Kota Malang, Jawa Timur <br />
+                    65145</li>
+                <li class="py-1 mb-2">Surel <br />
+                    swaraarekmalang@malangkota.go.id</li>
+                <li class="py-1 mb-2">Instagram <br>
+                    @swaraarekmalang</li>
+              </ul>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold">Laman Terkait</h5>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1">Situs Resmi Pemerintah Kota Malang</li>
+                <li class="py-1">Dinas Komunikasi dan Informatika Kota Malang</li>
+              </ul>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold">Swara Arek Malang</h5>
+            <ul class="list-unstyled pt-2">
+              <li class="py-1">Aplikasi Pelaporan Warga Kota Malang</li>
+              <li class="py-1">Bersama SAM, Suaramu Didengar dan Ditindaklanjuti</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <div class="footer-bottom">
+            © Copyright 2025 Pemerintah Kota Malang
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-pills .nav-link');
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault(); // Mencegah perilaku tautan default
+
+            // Hapus kelas 'active' dari tautan yang saat ini aktif
+            const currentActive = document.querySelector('.nav-pills .nav-link.active');
+            if (currentActive) {
+              currentActive.classList.remove('active');
+            }
+
+            // Tambahkan kelas 'active' ke tautan yang diklik
+            this.classList.add('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

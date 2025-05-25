@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panduan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    .nav-pills .nav-link {
+        border-radius: 20px;
+        color: black;
+        background-color: #FFE1D9;
+    }
+    .nav-pills .nav-link.active {
+       background-color: #002E67;
+       color: white;
+       border-radius: 15px;
+    }
+    .tab-container {
+        background-color: #FFE1D9 ;
+        border-radius: 15px;
+        padding: 5px;
+    }
+    .custom-footer {
+        background-color: #002E67;
+    }
+    footer a {
+        display: block; 
+        text-decoration: none !important; 
+        color: inherit; 
+    }
+    footer a .custom-p {
+       font-size: 14px;
+    }
+    footer a .footer-app {
+        width: 181px;
+        height: 46px;
+    }
+    .footer-bottom {
+        background-color: #002e67; /* Warna latar belakang bagian bawah footer */
+        color: #ffffff; /* Warna teks bagian bawah footer */
+        text-align: center; /* Tengahkan teks bagian bawah */
+        padding-top: 20px; /* Padding atas bagian bawah */
+        padding-bottom: 20px; /* Padding bawah bagian bawah */
+        border-top: 1px solid#ffffff; /* Garis pemisah atas */
+        margin-top: 30px; /* Margin atas untuk memisahkan dari konten atas */
+    }
+
+
+      .bg-custom-profile {
+      background-color: #e6e6e6;
+      }
+      .btn-edit-custom:hover {
+        background-color: #e6e6e6;
+      }
+      .bg-menu-custom {
+      background-color: #e6e6e6;
+      }
+      .icon-custom {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      }
+      .list-group-item:hover {
+      background-color: #d9d9d9 !important; /* Contoh warna latar belakang saat di-hover */
+      color: #E85A33; /* Contoh warna teks saat di-hover */
+      }
+      
+      .footer-copyright {
+      color : #cccccc;
+      }
+
+
+      ody {
+      font-family: "Poppins", sans-serif;
+      }
+      .custom-navbar, .custom-footer {
+      background-color: #002e67;
+      }
+      .custom-navbar .nav-link.active,
+      .custom-navbar .nav-link:hover,
+      .custom-footer .footer-link:hover{
+        color: #fe724c !important;
+      }
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.3);
+        outline: none;
+      }
+      .logo-navbar {
+        width: 40px;
+        height: auto;
+      }
+      footer a {
+        display: block; 
+        text-decoration: none !important; 
+        color: inherit; 
+      }
+      footer a .custom-p {
+      font-size: 14px;
+      }
+      footer a .footer-app {
+        width: 181px;
+        height: 46px;
+      }
+      .footer-bottom {
+      background-color: #002e67; 
+      color: #ffffff; 
+      text-align: center;
+      padding-top: 20px; 
+      padding-bottom: 20px; 
+      border-top: 1px solid#ffffff; 
+      margin-top: 30px; 
+      }
+  </style>
+
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="FIX LOGO SAM.png" class="logo-navbar" alt="Logo">
+            SwaraArekMalang
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Aktivitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lapor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Notifikasi</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Profil</a></li>
+          </ul>
+          </div>
+        </div>
+      </nav> 
+  
+   <script>
+      document.querySelectorAll('.custom-navbar .nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+          document.querySelectorAll('.custom-navbar .nav-link').forEach(nav => nav.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+
+    <div class="text-center py-4 px-3 border border-1 shadow"> <img src="foto-farah.jpg" class="rounded-circle mx-auto d-block mb-2" alt="Foto Profil" style="width: 95px; height: 95px;">
+      <h3 class="mb-1">Farah Fadhilah</h3>
+      <small class="text-muted d-block mb-2">123456789101112</small>
+      <button class="btn btn-sm" style="background-color: #002757; color: #B3C1D2;"><h>Edit Profil</h></button>
+  </div>
+  <br>
+  <div class="list-group shadow"> <a href="#" class="list-group-item d-flex justify-content-between align-items-center border border-1 mb-1">
+        <div class="d-flex align-items-center">
+          <i class="setting fs-5 me-1"></i>
+          <img src="setting.png" alt="Pengaturan Icon" style="width: 24px; height: 24px; margin-right: 10px;">
+          <span>Pengaturan</span>
+        </div>
+        <img src="right-sign.png" class="icon-custom" alt="Right Sign Icon">
+      </a>
+      <a href="#" class="list-group-item d-flex justify-content-between align-items-center border border-1">
+        <div class="d-flex align-items-center">
+          <i class="Book fs-5 me-1"></i>
+          <img src="Book.png" alt="Pengaturan Icon" style="width: 24px; height: 24px; margin-right: 10px;">
+          <span>Kebijakan Pengguna & Aplikasi</span>
+        </div>
+        <img src="right-sign.png" class="icon-custom" alt="Right Sign Icon">
+      </a>
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer class="custom-footer navbar-dark text-light .fw-normal .custom-p pt-5">
+    <div class="row justify-content-center text-center py-3">
+        <h3 class="fw-bold">Ayo Unduh SAM Saiki, Ker!</h3>
+        <div class="d-flex justify-content-center gap-2 mt-4 mb-5">
+    <a href="https://play.google.com/store/games?hl=id&pli=1" target="_blank" rel="noopener noreferrer">
+        <img src="playstore.png" class="footer-app" alt="Logo Play Store" />
+    </a>
+    <a href="https://www.apple.com/id/app-store/" target="_blank" rel="noopener noreferrer">
+        <img src="appstore.png" class="footer-app" alt="Logo App Store" />
+    </a>
+</div>
+    </div>
+    <div class="container">
+    <div class="row g-4">
+        <div class="col-12 col-md-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="FIX LOGO SAM.png" class="logo-navbar" alt="Logo" />
+                <h5 class="fw-bold">Swara Arek Malang</h5>
+            </a>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1 mb-2">Alamat <br />Jl. Veteran No.8, Ketawanggede, Kec. Lowokwaru,<br>
+                    Kota Malang, Jawa Timur <br />
+                    65145</li>
+                <li class="py-1 mb-2">Surel <br />
+                    swaraarekmalang@malangkota.go.id</li>
+                <li class="py-1 mb-2">Instagram <br>
+                    @swaraarekmalang</li>
+            </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <h5 class="fw-bold">Laman Terkait</h5>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1">Situs Resmi Pemerintah Kota Malang</li>
+                <li class="py-1">Dinas Komunikasi dan Informatika Kota Malang</li>
+            </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <h5 class="fw-bold">Swara Arek Malang</h5>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1">Aplikasi Pelaporan Warga Kota Malang</li>
+                <li class="py-1">Bersama SAM, Suaramu Didengar dan Ditindaklanjuti</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="footer-bottom">
+        ©️ Copyright 2025 Pemerintah Kota Malang
+    </div>
+</footer>
+    <script>
+      document.querySelectorAll(".custom-navbar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".custom-navbar .nav-link")
+            .forEach((nav) => nav.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
