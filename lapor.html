@@ -55,28 +55,26 @@
       }
 
       .footer-bottom {
-      background-color: #002e67; /* Warna latar belakang bagian bawah footer */
-      color: #ffffff; /* Warna teks bagian bawah footer */
-      text-align: center; /* Tengahkan teks bagian bawah */
-      padding-top: 20px; /* Padding atas bagian bawah */
-      padding-bottom: 20px; /* Padding bawah bagian bawah */
-      border-top: 1px solid#ffffff; /* Garis pemisah atas */
-      margin-top: 30px; /* Margin atas untuk memisahkan dari konten atas */
+      background-color: #002e67;
+      color: #ffffff;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-top: 1px solid#ffffff;
+      margin-top: 30px;
     }
 
     #notificationSidebar {
         position: fixed;
         top: 0;
-        left: -350px; /* Lebar sidebar disesuaikan */
+        left: -350px;
         width: 350px;
-        height: 100vh; /* Ubah menjadi 100% dari tinggi viewport */
-        /* max-height: calc(100% - 60px); <-- Hapus atau komentar baris ini */
+        height: 100vh;
         background-color: #f8f9fa;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         z-index: 1050;
         overflow-y: auto;
         transition: left 0.3s ease-in-out;
-        /* padding-top: 56px; <-- Jika ada navbar yang menutupi, mungkin perlu disesuaikan */
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -231,8 +229,6 @@
   </head>
 
   <body>
-     <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
@@ -257,7 +253,6 @@
         </div>
       </div>
     </nav>
-
 
     <div id="notificationSidebar">
       <div class="notification-header">
@@ -365,8 +360,11 @@
   <div class="container my-5">
 
   <h6 class="fw-bold mb-3">
-    <img src="back-symbol.svg">         Laporan</a>
-  </h6>
+  <a href="home.html" class="text-decoration-none text-dark">
+    <img src="back-symbol.svg" alt="Kembali" style="width: 10px; vertical-align: middle;">
+    <span class="ms-2">Laporan</span>
+  </a>
+</h6>
 
   <h4 class="fw-bold mb-3">Formulir Pelaporan</h4>
 
@@ -376,8 +374,7 @@
 
   <h5 class="fw-bold mb-4">Jelajahi Kategori</h5>
   <div class="row g-3">
-   
-     <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3">
       <div class="card p-2 d-flex flex-row align-items-center">
         <img src="Hospital.png" alt="Fasilitas Umum" class="category-icon">
         <span>Fasilitas Umum</span>
@@ -395,7 +392,7 @@
         <span>Sarana Informasi</span>
       </div>
     </div>
-       <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
       <div class="card p-2 d-flex flex-row align-items-center">
         <img src="Guard.png" alt="Keamanan" style="width: 20px; height: 30px; margin-right: 10px;">
         <span>Keamanan</span>
@@ -410,7 +407,7 @@
     <div class="col-6 col-md-4 col-lg-3">
       <div class="card p-2 d-flex flex-row align-items-center">
         <img src="aksesibilitas.png" alt="Aksesibilitas" style="width: 20px; height: 30px; margin-right: 10px;">
- <span>Aksesibilitas</span>
+  <span>Aksesibilitas</span>
       </div>
     </div>
     <div class="col-6 col-md-4 col-lg-3">
@@ -460,8 +457,8 @@
   </div>
 
   <div class="d-grid">
-    <button class="btn footer-bottom">Submit</button>
-  </div>
+  <a href="home.html" class="btn footer-bottom text-decoration-none text-light">Submit</a>
+</div>
 
 </div>
 </a>
@@ -517,9 +514,8 @@
     </div>
 </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+    <script>
       document.querySelectorAll(".custom-navbar .nav-link").forEach((link) => {
         link.addEventListener("click", function () {
           document
@@ -531,17 +527,15 @@
     </script>
 
     <script>
-      // Mengatur event listener untuk tombol notifikasi
       document
         .getElementById("notificationButton")
         .addEventListener("click", function (e) {
-          e.preventDefault(); // Mencegah perilaku default tautan
+          e.preventDefault();
 
           const notificationSidebar = document.getElementById(
             "notificationSidebar"
           );
 
-          // Jika sidebar sudah terbuka, tutup. Jika tidak, buka.
           if (notificationSidebar.classList.contains("open")) {
             notificationSidebar.classList.remove("open");
           } else {
@@ -549,7 +543,6 @@
           }
         });
 
-      // Mengatur event listener untuk tombol tutup (X) di dalam sidebar
       document
         .querySelector("#notificationSidebar .close-button")
         .addEventListener("click", function () {
@@ -558,7 +551,6 @@
             .classList.remove("open");
         });
 
-      // Opsional: Menutup sidebar saat mengklik di luar sidebar
       document.addEventListener("click", function (event) {
         const notificationSidebar = document.getElementById(
           "notificationSidebar"
@@ -566,7 +558,6 @@
         const notificationButton =
           document.getElementById("notificationButton");
 
-        // Jika sidebar terbuka DAN yang diklik BUKAN sidebar itu sendiri atau tombol notifikasi
         if (
           notificationSidebar.classList.contains("open") &&
           !notificationSidebar.contains(event.target) &&
@@ -576,7 +567,6 @@
         }
       });
 
-      // Menutup sidebar saat navbar toggler diklik (jika navbar tertutup)
       document
         .querySelector(".navbar-toggler")
         .addEventListener("click", function () {

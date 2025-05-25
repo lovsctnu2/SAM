@@ -271,15 +271,13 @@
 
         navLinks.forEach(link => {
           link.addEventListener('click', function(e) {
-            e.preventDefault(); // Mencegah perilaku tautan default
+            e.preventDefault();
 
-            // Hapus kelas 'active' dari tautan yang saat ini aktif
             const currentActive = document.querySelector('.nav-pills .nav-link.active');
             if (currentActive) {
               currentActive.classList.remove('active');
             }
 
-            // Tambahkan kelas 'active' ke tautan yang diklik
             this.classList.add('active');
           });
         });
