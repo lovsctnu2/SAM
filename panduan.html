@@ -25,6 +25,7 @@
       background-color: #FFE1D9;
       font-size: 0.95rem;
       transition: background-color 0.3s ease;
+      border-radius: 10px;
     }
 
     .nav-pills .nav-link.active {
@@ -118,97 +119,233 @@
         margin-bottom: 2rem;
       }
 
+      .faq-item {
+          margin-bottom: 15px;
+          border: 1px solid #dee2e6;
+          border-radius: 8px;
+          overflow: hidden;
+      }
+      .faq-question {
+          background-color: #f8f9fa;
+          padding: 15px 20px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: 600;
+          color: #333;
+          border-bottom: 1px solid #dee2e6;
+      }
+      .faq-question:hover {
+          background-color: #e9ecef;
+      }
+      .faq-question.active {
+          background-color: #e2e6ea;
+          border-bottom-color: transparent;
+      }
+      .faq-question .arrow {
+          font-size: 1.2em;
+          transition: transform 0.3s ease;
+          margin-left: 10px;
+          color: #6c757d;
+      }
+      .faq-question.active .arrow {
+          transform: rotate(90deg);
+      }
+      .faq-answer {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+          background-color: #ffffff;
+          padding: 0 20px;
+          color: #555;
+      }
+      .faq-answer.open {
+          max-height: 500px;
+          padding: 15px 20px;
+          transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+      }
+      .faq-answer p, .faq-answer ul {
+          margin-bottom: 0;
+      }
+      .faq-answer ul {
+          padding-left: 20px;
+      }
     </style>
 
   </head>
   <body>
     <div class="d-flex align-items-center mt-5 ms-4">
-        <a href="home.html">
+        <a href="index.html">
         <img src="Gambar_Panduan/IkonBack.png" alt="Back Icon" class="me-2" style="width: 15px; height: 19px;">
         </a>
         <h4 class="fw-bold mb-0">Panduan</h4>
     </div>
 
       <div class="d-flex justify-content-center mt-4 mx-3">
-        <ul class="nav nav-pills tab-container">
-          <li class="nav-item mx-2 flex-fill">
-            <a class="nav-link active d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">Panduan SAM</a>
+        <ul class="nav nav-pills tab-container" id="myTab" role="tablist">
+          <li class="nav-item mx-2 flex-fill" role="presentation">
+            <button class="nav-link active d-flex align-items-center justify-content-center px-5 py-2 text-center" id="panduan-sam-tab" data-bs-toggle="tab" data-bs-target="#panduan-sam" type="button" role="tab" aria-controls="panduan-sam" aria-selected="true">Panduan SAM</button>
           </li>
-          <li class="nav-item mx-2 flex-fill">
-            <a class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">FAQ</a>
+          <li class="nav-item mx-2 flex-fill" role="presentation">
+            <button class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">FAQ</button>
           </li>
-          <li class="nav-item mx-2 flex-fill">
-            <a class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" href="#">Kontak Bantuan</a>
+          <li class="nav-item mx-2 flex-fill" role="presentation">
+            <button class="nav-link d-flex align-items-center justify-content-center px-5 py-2 text-center" id="kontak-bantuan-tab" data-bs-toggle="tab" data-bs-target="#kontak-bantuan" type="button" role="tab" aria-controls="kontak-bantuan" aria-selected="false">Kontak Bantuan</button>
           </li>
         </ul>
     </div>
 
-    <div class="mt-5 ms-4">
-        <div class="d-flex align-items-center mb-1">
-            <img src="Gambar_Panduan/loginApp.png" alt="Login Aplikasi" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 1: Masuk ke Aplikasi</h6>
+    <div class="tab-content mt-4 mx-3" id="myTabContent">
+        <div class="tab-pane show active" id="panduan-sam" role="tabpanel" aria-labelledby="panduan-sam-tab">
+            <div class="section-container">
+                <div class="d-flex align-items-center mb-1">
+                    <img src="Gambar_Panduan/loginApp.png" alt="Login Aplikasi" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 1: Masuk ke Aplikasi</h6>
+                </div>
+                <p class="mb-0 me-2">Login dengan akun Anda. Belum punya? Daftar terlebih dahulu.</p>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <img src="Gambar_Panduan/Lapor.png" alt="Ajukan Laporan" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 2: Ajukan Laporan</h6>
+                </div>
+                <ul>
+                    <li>Buka Menu Laporan</li>
+                    <li>Pilih Formulir Laporan</li>
+                    <li>Tentukan Kategori Masalah</li>
+                    <li>Tambahkan Foto/Video jika perlu</li>
+                    <li>Tekan Kirim Laporan</li>
+                </ul>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <img src="Gambar_Panduan/activity.png" alt="Pantau Aktivitas" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 3: Pantau Aktivitas</h6>
+                </div>
+                <ul>
+                    <li>Cek Status & Progres Laporan</li>
+                    <li> Lihat Estimasi Waktu Penanganan</li>
+                    <li>Akses Riwayat Laporan</li>
+                    <li>Berikan Feedback & Evaluasi</li>
+                </ul>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1">
+                    <img src="Gambar_Panduan/notif.png" alt="Notifikasi" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 4: Dapatkan Notifikasi</h6>
+                </div>
+                <p class="mb-0 me-2">Lihat semua update laporan, respon pemerintah, dan pengingat di menu Notifikasi.</p>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1">
+                    <img src="Gambar_Panduan/readPanduan.png" alt="Baca Panduan" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 5: Baca Panduan & Bantuan</h6>
+                </div>
+                <p class="mb-0 me-2">Akses FAQ atau hubungi Kontak Bantuan untuk bantuan teknis atau informasi lainnya.</p>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1">
+                    <img src="Gambar_Panduan/InfoKota.png" alt="Informasi Kota" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 6: Info Kota</h6>
+                </div>
+                <p class="mb-0 me-2">Temukan Program Pemerintah, Kebijakan Baru, dan Pembaruan Masalah Kota di menu Info Kota.</p>
+
+                <hr class="my-4 me-4">
+
+                <div class="d-flex align-items-center mb-1">
+                    <img src="Gambar_Panduan/Settings.png" alt="Kelola Akun" class="me-2" style="width: 15px; height: 19px;">
+                    <h6 class="fw-bold mb-0">Langkah 7: Kelola Akun</h6>
+                </div>
+                <p class="mb-5 me-2">Perbarui Profil, cek ulang Kebijakan Aplikasi, dan atur pengaturan sesuai kebutuhan Anda.</p>
+            </div>
         </div>
-        <p class="mb-0 me-2">Login dengan akun Anda. Belum punya? Daftar terlebih dahulu.</p>
 
-        <hr class="my-4 me-4">
+        <div class="tab-pane" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+            <div class="section-container">
+                <h4 class="fw-bold mb-4">Pertanyaan Umum (FAQ)</h4>
 
-        <div class="d-flex align-items-center mb-1 mt-4">
-            <img src="Gambar_Panduan/Lapor.png" alt="Ajukan Laporan" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 2: Ajukan Laporan</h6>
+                <div class="faq-item">
+                    <div class="faq-question" data-target="faq-question-1">
+                        <span>Bagaimana cara mendaftar akun JAKI (contoh dari gambar)?</span>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="faq-answer" id="faq-question-1">
+                        <ul>
+                            <li>Buka aplikasi Play Store atau App Store</li>
+                            <li>Cari aplikasi "Jakarta Kini" (JAKI), lalu unduh</li>
+                            <li>Setelah berhasil mengunduh, ketuk ikon 'Profil' di pojok kanan bawah</li>
+                            <li>Pilih alamat email yang ingin Anda daftarkan</li>
+                            <li>Ketik nama pengguna yang ingin Anda gunakan</li>
+                            <li>Ketuk 'Edit Profil' untuk melengkapi data akun JAKI Anda</li>
+                            <li>Terakhir, jangan lupa untuk mengaktifkan akun JAKI Anda di alamat email yang Anda gunakan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" data-target="faq-question-2">
+                        <span>Bagaimana cara mengajukan laporan baru di SAM?</span>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="faq-answer" id="faq-question-2">
+                        <p>Untuk mengajukan laporan baru:</p>
+                        <ol>
+                            <li>Pilih menu "Laporan" di aplikasi.</li>
+                            <li>Pilih jenis laporan yang sesuai (misal: "Kerusakan Infrastruktur", "Sampah", dll.).</li>
+                            <li>Isi detail laporan, termasuk lokasi, deskripsi masalah, dan tambahkan foto atau video jika memungkinkan.</li>
+                            <li>Tekan tombol "Kirim Laporan".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" data-target="faq-question-3">
+                        <span>Bagaimana cara melacak status laporan saya?</span>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="faq-answer" id="faq-question-3">
+                        <p>Anda bisa melacak status laporan Anda di menu "Aktivitas" atau "Riwayat Laporan". Di sana, Anda akan melihat status terkini laporan Anda, progres penanganan, dan perkiraan waktu penyelesaian.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" data-target="faq-question-4">
+                        <span>Apa yang harus saya lakukan jika laporan saya ditolak atau tidak ada tanggapan?</span>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="faq-answer" id="faq-question-4">
+                        <p>Jika laporan Anda ditolak atau tidak ada tanggapan dalam waktu yang wajar, Anda bisa:</p>
+                        <ul>
+                            <li>Memeriksa kembali alasan penolakan (jika ada).</li>
+                            <li>Mengajukan laporan baru dengan informasi yang lebih lengkap dan jelas.</li>
+                            <li>Menghubungi "Kontak Bantuan" kami untuk mendapatkan bantuan lebih lanjut.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <ul>
-            <li>Buka Menu Laporan</li>
-            <li>Pilih Formulir Laporan</li>
-            <li>Tentukan Kategori Masalah</li>
-            <li>Tambahkan Foto/Video jika perlu</li>
-            <li>Tekan Kirim Laporan</li>
-        </ul>
 
-        <hr class="my-4 me-4">
-
-        <div class="d-flex align-items-center mb-1 mt-4">
-            <img src="Gambar_Panduan/activity.png" alt="Pantau Aktivitas" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 3: Pantau Aktivitas</h6>
+        <div class="tab-pane" id="kontak-bantuan" role="tabpanel" aria-labelledby="kontak-bantuan-tab">
+            <div class="section-container">
+                <h4 class="fw-bold mb-4">Kontak Bantuan</h4>
+                <p>Jika Anda membutuhkan bantuan atau memiliki pertanyaan lebih lanjut, Anda bisa menghubungi kami melalui:</p>
+                <ul>
+                    <li><strong>Email:</strong> swaraarekmalang@malangkota.go.id</li>
+                    <li><strong>Instagram:</strong> @swaraarekmalang</li>
+                    <li><strong>Alamat Kantor:</strong> Jl. Veteran No.8, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</li>
+                </ul>
+                <p>Tim dukungan kami siap membantu Anda pada jam kerja.</p>
+            </div>
         </div>
-        <ul>
-            <li>Cek Status & Progres Laporan</li>
-            <li> Lihat Estimasi Waktu Penanganan</li>
-            <li>Akses Riwayat Laporan</li>
-            <li>Berikan Feedback & Evaluasi</li>
-        </ul>
-
-        <hr class="my-4 me-4">
-
-        <div class="d-flex align-items-center mb-1">
-            <img src="Gambar_Panduan/notif.png" alt="Notifikasi" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 4: Dapatkan Notifikasi</h6>
-        </div>
-        <p class="mb-0 me-2">Lihat semua update laporan, respon pemerintah, dan pengingat di menu Notifikasi.</p>
-
-        <hr class="my-4 me-4">
-
-        <div class="d-flex align-items-center mb-1">
-            <img src="Gambar_Panduan/readPanduan.png" alt="Baca Panduan" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 5: Baca Panduan & Bantuan</h6>
-        </div>
-        <p class="mb-0 me-2">Akses FAQ atau hubungi Kontak Bantuan untuk bantuan teknis atau informasi lainnya.</p>
-
-        <hr class="my-4 me-4">
-
-        <div class="d-flex align-items-center mb-1">
-            <img src="Gambar_Panduan/InfoKota.png" alt="Informasi Kota" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 6: Info Kota</h6>
-        </div>
-        <p class="mb-0 me-2">Temukan Program Pemerintah, Kebijakan Baru, dan Pembaruan Masalah Kota di menu Info Kota.</p>
-
-        <hr class="my-4 me-4">
-
-        <div class="d-flex align-items-center mb-1">
-            <img src="Gambar_Panduan/Settings.png" alt="Kelola Akun" class="me-2" style="width: 15px; height: 19px;">
-            <h6 class="fw-bold mb-0">Langkah 7: Kelola Akun</h6>
-        </div>
-        <p class="mb-5 me-2">Perbarui Profil, cek ulang Kebijakan Aplikasi, dan atur pengaturan sesuai kebutuhan Anda.</p>
     </div>
+
 
     <footer class="custom-footer navbar-dark text-light .fw-normal .custom-p pt-5">
         <div class="row justify-content-center text-center py-3">
@@ -265,23 +402,36 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('.nav-pills .nav-link');
-
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const currentActive = document.querySelector('.nav-pills .nav-link.active');
-            if (currentActive) {
-              currentActive.classList.remove('active');
-            }
-
-            this.classList.add('active');
-          });
-        });
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const myTabs = document.querySelectorAll('#myTab button');
+    myTabs.forEach(tab => {
+      tab.addEventListener('shown.bs.tab', event => {
+        window.location.hash = event.target.getAttribute('data-bs-target').substring(1);
       });
+    });
+
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+        const targetId = this.dataset.target;
+        const answer = document.getElementById(targetId);
+
+        this.classList.toggle('active');
+        answer.classList.toggle('open');
+      });
+    });
+
+    const hash = window.location.hash;
+    if (hash) {
+      const targetTab = document.querySelector(`button[data-bs-target="${hash}"]`);
+      if (targetTab) {
+        const bsTab = new bootstrap.Tab(targetTab);
+        bsTab.show();
+      }
+    }
+  });
+</script>
     </script>
   </body>
 </html>
